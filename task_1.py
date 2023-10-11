@@ -14,6 +14,7 @@ def write_info(name_csv: str, rating: int) -> None:
         for name in name_review:
             writer.writerow([os.path.join(full_path, str(rating), name), os.path.join(relative_path, str(rating), name), rating])
 
+
 def create_csv_file(name_csv: str) -> None:
     """
         the function creates a csv file and enters the name of the columns
@@ -21,7 +22,6 @@ def create_csv_file(name_csv: str) -> None:
     with open(name_csv, 'w') as csv_file:
         writer = csv.writer(csv_file, delimiter=",", lineterminator='\r')
         writer.writerow(["absolute_path", "relative path", "rating"])
-
 
 
 def main():
