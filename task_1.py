@@ -21,10 +21,10 @@ def create_csv_file(name_csv: str) -> None:
     """
     with open(name_csv, 'w') as csv_file:
         writer = csv.writer(csv_file, delimiter=",", lineterminator='\r')
-        writer.writerow(["absolute_path", "relative path", "rating"])
+        writer.writerow(["absolute_path", "relative_path", "rating"])
 
 
-def main():
+def main() -> None:
     create_csv_file('annotation1.csv')
     for i in range(1, 6):
         write_info('annotation1.csv', i)

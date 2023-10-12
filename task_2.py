@@ -1,6 +1,7 @@
 import os
 import shutil
 import csv
+
 from task_1 import create_csv_file
 
 def make_dir(name: str) -> None:
@@ -36,7 +37,7 @@ def write_info(name_csv: str) -> None:
             writer.writerow([os.path.join(p, name), os.path.join(p1, name), name[0]])
 
 
-def main():
+def main() -> None:
     copy_info()
     create_csv_file('annotation2.csv')
     write_info('annotation2.csv')
